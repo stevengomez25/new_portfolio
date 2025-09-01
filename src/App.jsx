@@ -1,7 +1,7 @@
-import './App.css'
-import NavBar from './components/navbar'
-import HeroCard from './components/cards/herocard'
-import Loader from './components/Loader'
+import './App.css';
+import NavBar from './components/navbar';
+import HeroCard from './components/cards/herocard';
+import Loader from './components/Loader';
 
 function App() {
 

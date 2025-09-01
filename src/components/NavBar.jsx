@@ -1,4 +1,4 @@
-const NavBar = () =>{
+export default function NavBar (){
     return(
         <div className="flex fixed top-0 justify-end w-full p-3">
             <div className="flex w-full md:w-1/2 sm:w1/3 shadow-[7px_7px_0px_0px_rgba(0,0,0,0.4)]">
@@ -10,5 +10,3 @@ const NavBar = () =>{
         </div>
     )
 }
-
-export default NavBar;
