@@ -1,6 +1,6 @@
 import './App.css';
-import NavBar from './components/navbar';
-import HeroCard from './components/cards/herocard';
+import NavBar from './components/NavBar';
+import HeroCard from './components/cards/HeroCard';
 import Loader from './components/Loader';
 
 function App() {
