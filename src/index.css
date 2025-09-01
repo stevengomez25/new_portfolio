@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* define the keyframes in plain CSS */
+@keyframes marquee {
+  0%   { transform: translateX(0%) }
+  100% { transform: translateX(-50%) }
+}
+
+@keyframes atommorph {
+    0%   { border-radius: 50%; }
+  20%  { border-radius: 48% 52% 52% 48% / 52% 48% 52% 48%; }
+  40%  { border-radius: 70% 20% 80% 30% / 20% 75% 25% 80%; } 
+  55%  { border-radius: 25% 75% 35% 65% / 70% 20% 80% 30%; } 
+  70%  { border-radius: 60% 40% 65% 35% / 40% 70% 30% 60%; } 
+  80%  { border-radius: 52% 48% 52% 48% / 48% 52% 48% 52%; }
+  100% { border-radius: 50%; }
+  }
+
+  .animate-atommorph {
+    animation: atommorph 4s cubic-bezier(0.66, -0.4, 0.34, 1.4) infinite;
+  }
+
+  @layer base {
+  * {
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+  }
+}
