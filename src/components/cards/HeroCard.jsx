@@ -22,7 +22,7 @@ import gmail from '../icons/gmail.png';
 
 const HeroCard = () => {
     return (
-        <div id="about_me" className="justify-end md:justify-normal w-dvw flex grow items-center md:p-3 flex-col-reverse md:flex-col text-white">
+        <div id="about_me" className="h-dvh justify-end md:justify-normal w-dvw flex grow items-center md:p-3 flex-col-reverse md:flex-col text-white">
             <div className="flex flex-col justify-center md:h-full items-center md:p-3 md:flex-row">
                 <div className="pl-1 w-full h-full md:w-2/3 flex flex-col justify-center">
                     <h1 className="text-3xl lg:text-6xl md:p-2">Steven Gomez</h1>
