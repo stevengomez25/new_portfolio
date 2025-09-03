@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import HeroCard from './components/cards/HeroCard';
 import Loader from './components/Loader';
-import ProjectCard from './components/cards/projectCard';
+import ProjectCard from './components/cards/ProjectCard';
 
 function App() {
 
