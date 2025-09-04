@@ -14,7 +14,7 @@ function App() {
       <NavBar/>
       <HeroCard/>
       <ProjectCard/>
-      <div className='text-white text-center text-xs sm:text-lg'>
+      <div className='text-white text-center text-xs sm:text-lg fixed bottom-0'>
         Developed by StevenGDeveloper 2025©. All rights reserved.
       </div>
     </div>

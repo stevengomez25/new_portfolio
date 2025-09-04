@@ -15,6 +15,7 @@
   80%  { border-radius: 52% 48% 52% 48% / 48% 52% 48% 52%; }
   100% { border-radius: 50%; }
   }
+  
 
   .animate-atommorph {
     animation: atommorph 4s cubic-bezier(0.66, -0.4, 0.34, 1.4) infinite;
@@ -25,5 +26,14 @@
     transition-property: all;
     transition-timing-function: ease-in-out;
     transition-duration: 300ms;
+  }
+}
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(-15deg);
+  }
+  to {
+    transform: rotateY(0deg);
   }
 }
