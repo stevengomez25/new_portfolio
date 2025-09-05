@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* define the keyframes in plain CSS */
 @keyframes marquee {
   0%   { transform: translateX(0%) }
