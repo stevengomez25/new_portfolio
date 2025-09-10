@@ -4,7 +4,7 @@ import img3 from '../images/veterinaria.png';
 import img4 from '../images/pharmacydatabase.png';
 import img5 from '../images/softskills.png';
 
-const images = {
+const Images = {
     img1,
     img2,
     img3,
@@ -12,4 +12,4 @@ const images = {
     img5
 }
 
-export default images;
+export default Images;
