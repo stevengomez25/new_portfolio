@@ -5,7 +5,7 @@ import Modal from "../ImageModal";
 
 const ProjectCard = () => {
     const projects = [
-        { id: 1, title: "Professional Portfolio", img: Images.img2 , desc: "dPortafolio web creado con React y Styled Components para un profesional del fitness. El sitio muestra servicios y galerías con un diseño personalizado, moderno y completamente responsivo.", category: "frontend", linkto: "https://alexcontreras.netlify.app" },
+        { id: 1, title: "Professional Portfolio", img: Images.img2 , desc: "Portafolio web creado con React y Styled Components para un profesional del fitness. El sitio muestra servicios y galerías con un diseño personalizado, moderno y completamente responsivo.", category: "frontend", linkto: "https://alexcontreras.netlify.app" },
         { id: 2, title: "Landing Veterinaria", img: Images.img3, desc: "Bosquejo de una página web estática para una veterinaria, creada con HTML, CSS y JavaScript puro. Es un diseño simple y de una sola página, ideal para presentar los servicios y contacto de forma clara.", category: "frontend", linkto: "https://pelucandog.netlify.app    " },
         { id: 3, title: "Log-in system", img: Images.img1, desc: "Sistema de login seguro con stack MERN. Usando JWT para autenticación y autorización, el proyecto gestiona el registro y el inicio de sesión, permitiendo acceso a rutas protegidas solo a usuarios verificados.", category: "backend", linkto: "https://saifsena.netlify.app/" },
         { id: 4, title: "Pharmacy Inventory Management", img: Images.img4, desc: "Backend robusto con stack MERN para la gestión de una farmacia. La API RESTful maneja productos y órdenes, usando JWT para una autenticación segura. El sistema está construido con Node.js, Express.js y MongoDB.", category: "backend", linkto: "https://saifsena.netlify.app/" },
@@ -71,13 +71,13 @@ const ProjectCard = () => {
                     <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">All</div>
                 </button>
                 <button onClick={() => setFilter('backend')}>
-                    <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">Back-End</div>
+                    <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">BackEnd</div>
                 </button>
                 <button onClick={() => setFilter('softskills')}>
-                    <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">Soft Skills</div>
+                    <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">Skills</div>
                 </button>
                 <button onClick={() => setFilter('frontend')}>
-                    <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">Front-End</div>
+                    <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">FrontEnd</div>
                 </button>
             </div>
 
@@ -86,18 +86,18 @@ const ProjectCard = () => {
                 {filteredProjects.map((project, i) => (
                     <div
                         key={project.id}
-                        className={`absolute flex flex-col text-center items-center justify-center border-2 border-black bg-white h-2/3 w-1/2 md:w-1/3 transition-all duration-700 ease-in-out ${getPosition(
+                        className={`absolute flex flex-col text-center items-center justify-evenly border-2 border-black bg-white h-5/6 w-1/2 md:w-1/3 transition-all duration-700 ease-in-out ${getPosition(
                             i
                         )}`}
                     >
-                        <h1 className="text-lg md: text-xl">{project.title}</h1>
+                        <h1 className="text-md md:text-xl">{project.title}</h1>
                         <img
                             src={project.img}
                             alt=""
                             className="w-1/2 cursor-pointer transition-transform duration-300 hover:scale-105"
                             onClick={() => openModal(project.img)}
                         />
-                        <p className="text-xs md:text-md mx-3">{project.desc}</p>
+                        <p className="text-xs md:text-lg mx-3">{project.desc}</p>
                         <button className="bg-blue-600 text-white hover:scale-105 p-2">
                             <a href={project.linkto} target="blank">Go to project!</a>
                         </button>
