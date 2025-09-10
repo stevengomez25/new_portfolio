@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import HeroCard from './components/cards/HeroCard';
 import Loader from './components/Loader';
 import ProjectCard from './components/cards/ProjectCard';
+import EducationCard from './components/cards/educationCard';
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
       <NavBar/>
       <HeroCard/>
       <ProjectCard/>
+      <EducationCard/>
       <div className='text-white text-center text-xs sm:text-lg fixed bottom-0'>
-        Developed by StevenGDeveloper 2025©. All rights reserved.
+        © Developed by StevenGDeveloper 2025. All rights reserved.
       </div>
     </div>
   )
