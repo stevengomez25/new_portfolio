@@ -6,7 +6,7 @@ import Modal from "../ImageModal";
 const ProjectCard = () => {
     const projects = [
         { id: 1, title: "Professional Portfolio", img: Images.img2 , desc: "dPortafolio web creado con React y Styled Components para un profesional del fitness. El sitio muestra servicios y galerías con un diseño personalizado, moderno y completamente responsivo.", category: "frontend", linkto: "https://alexcontreras.netlify.app" },
-        { id: 2, title: "Proyecto 2", img: Images.img3, desc: "Bosquejo de una página web estática para una veterinaria, creada con HTML, CSS y JavaScript puro. Es un diseño simple y de una sola página, ideal para presentar los servicios y contacto de forma clara.", category: "frontend", linkto: "https://pelucandog.netlify.app    " },
+        { id: 2, title: "Landing Veterinaria", img: Images.img3, desc: "Bosquejo de una página web estática para una veterinaria, creada con HTML, CSS y JavaScript puro. Es un diseño simple y de una sola página, ideal para presentar los servicios y contacto de forma clara.", category: "frontend", linkto: "https://pelucandog.netlify.app    " },
         { id: 3, title: "Log-in system", img: Images.img1, desc: "Sistema de login seguro con stack MERN. Usando JWT para autenticación y autorización, el proyecto gestiona el registro y el inicio de sesión, permitiendo acceso a rutas protegidas solo a usuarios verificados.", category: "backend", linkto: "https://saifsena.netlify.app/" },
         { id: 4, title: "Pharmacy Inventory Management", img: Images.img4, desc: "Backend robusto con stack MERN para la gestión de una farmacia. La API RESTful maneja productos y órdenes, usando JWT para una autenticación segura. El sistema está construido con Node.js, Express.js y MongoDB.", category: "backend", linkto: "https://saifsena.netlify.app/" },
         { id: 5, title: "Arquitectura de software", img: Images.img5, desc: "Basándome en el diseño del equipo, creé maquetas y estructuré el software usando Balsamiq. Esto definió claramente la distribución de componentes y estilos, asegurando una visión unificada del proyecto antes del desarrollo.", category: "softskills", linkto: "https://pharmacylanding.netlify.app" },
@@ -90,7 +90,7 @@ const ProjectCard = () => {
                             i
                         )}`}
                     >
-                        <h1 className="text-xl">{project.title}</h1>
+                        <h1 className="text-lg md: text-xl">{project.title}</h1>
                         <img
                             src={project.img}
                             alt=""
