@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
+import images from "../images/images";
+import Modal from "../ImageModal";
 
 const ProjectCard = () => {
     const projects = [
-        { id: 1, title: "Proyecto 1", img: "https://i0.wp.com/netlightsystems.com/blog/wp-content/uploads/2020/06/your-website.jpg?fit=441%2C291&ssl=1", desc: "deleniti eaque eum animi exercitationem corrupti, numquam, magni facilis obcaecati quas et nesciunt nihil.", category: "frontend" },
-        { id: 2, title: "Proyecto 2", img: "https://i0.wp.com/netlightsystems.com/blog/wp-content/uploads/2020/06/your-website.jpg?fit=441%2C291&ssl=1", desc: "deleniti eaque eum animi exercitationem corrupti, numquam, magni facilis obcaecati quas et nesciunt nihil.", category: "frontend" },
-        { id: 3, title: "Proyecto 3", img: "https://i0.wp.com/netlightsystems.com/blog/wp-content/uploads/2020/06/your-website.jpg?fit=441%2C291&ssl=1", desc: "deleniti eaque eum animi exercitationem corrupti, numquam, magni facilis obcaecati quas et nesciunt nihil.", category: "backend" },
-        { id: 4, title: "Proyecto 4", img: "https://i0.wp.com/netlightsystems.com/blog/wp-content/uploads/2020/06/your-website.jpg?fit=441%2C291&ssl=1", desc: "deleniti eaque eum animi exercitationem corrupti, numquam, magni facilis obcaecati quas et nesciunt nihil.", category: "backend" },
-        { id: 5, title: "Proyecto 5", img: "https://i0.wp.com/netlightsystems.com/blog/wp-content/uploads/2020/06/your-website.jpg?fit=441%2C291&ssl=1", desc: "deleniti eaque eum animi exercitationem corrupti, numquam, magni facilis obcaecati quas et nesciunt nihil.", category: "softskills" },
+        { id: 1, title: "Professional Portfolio", img: images.img2 , desc: "dPortafolio web creado con React y Styled Components para un profesional del fitness. El sitio muestra servicios y galerías con un diseño personalizado, moderno y completamente responsivo.", category: "frontend", linkto: "https://alexcontreras.netlify.app" },
+        { id: 2, title: "Proyecto 2", img: images.img3, desc: "Bosquejo de una página web estática para una veterinaria, creada con HTML, CSS y JavaScript puro. Es un diseño simple y de una sola página, ideal para presentar los servicios y contacto de forma clara.", category: "frontend", linkto: "https://pelucandog.netlify.app    " },
+        { id: 3, title: "Log-in system", img: images.img1, desc: "Sistema de login seguro con stack MERN. Usando JWT para autenticación y autorización, el proyecto gestiona el registro y el inicio de sesión, permitiendo acceso a rutas protegidas solo a usuarios verificados.", category: "backend", linkto: "https://saifsena.netlify.app/" },
+        { id: 4, title: "Pharmacy Inventory Management", img: images.img4, desc: "Backend robusto con stack MERN para la gestión de una farmacia. La API RESTful maneja productos y órdenes, usando JWT para una autenticación segura. El sistema está construido con Node.js, Express.js y MongoDB.", category: "backend", linkto: "https://saifsena.netlify.app/" },
+        { id: 5, title: "Arquitectura de software", img: images.img5, desc: "Basándome en el diseño del equipo, creé maquetas y estructuré el software usando Balsamiq. Esto definió claramente la distribución de componentes y estilos, asegurando una visión unificada del proyecto antes del desarrollo.", category: "softskills", linkto: "https://pharmacylanding.netlify.app" },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,9 +25,9 @@ const ProjectCard = () => {
 
     const [filter, setFilter] = useState('all');
 
-    useEffect(()=>{
+    useEffect(() => {
         setCurrentIndex(0);
-    },[filter])
+    }, [filter])
 
     const filteredProjects = filter === 'all' ? projects : projects.filter(project => project.category === filter);
 
@@ -47,20 +49,33 @@ const ProjectCard = () => {
         return "opacity-0 scale-75";
     };
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = (imgUrl) => {
+        setModalImage(imgUrl);
+        setIsModalOpen(true);
+    };
+
+    const [modalImage, setModalImage] = useState('');
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setModalImage('');
+    };
+
     return (
         <div id="projects" className="h-dvh w-dvw flex flex-col items-center justify-between text-black">
             {/* filtros */}
             <div className="h-1/5 flex gap-2 justify-center items-end">
-                <button onClick={()=> setFilter('all')}>
+                <button onClick={() => setFilter('all')}>
                     <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">All</div>
                 </button>
-                <button onClick={()=> setFilter('backend')}>
+                <button onClick={() => setFilter('backend')}>
                     <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">Back-End</div>
                 </button>
-                <button onClick={()=> setFilter('softskills')}>
+                <button onClick={() => setFilter('softskills')}>
                     <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">Soft Skills</div>
                 </button>
-                <button onClick={()=> setFilter('frontend')}>
+                <button onClick={() => setFilter('frontend')}>
                     <div className="border-2 p-2 bg-white cursor-pointer hover:scale-105">Front-End</div>
                 </button>
             </div>
@@ -75,10 +90,25 @@ const ProjectCard = () => {
                         )}`}
                     >
                         <h1 className="text-xl">{project.title}</h1>
-                        <img src={project.img} alt="" className="w-1/2" />
-                        <p className="text-sm md:text-lg mx-3">{project.desc}</p>
+                        <img
+                            src={project.img}
+                            alt=""
+                            className="w-1/2 cursor-pointer transition-transform duration-300 hover:scale-105"
+                            onClick={() => openModal(project.img)}
+                        />
+                        <p className="text-xs md:text-md mx-3">{project.desc}</p>
+                        <button className="bg-blue-600 text-white hover:scale-105 p-2">
+                            <a href={project.linkto} target="blank">Go to project!</a>
+                        </button>
                     </div>
                 ))}
+
+                {isModalOpen && (
+                    <Modal
+                        imageUrl={modalImage}
+                        onClose={closeModal}
+                    />
+                )}
             </div>
 
             {/* controles */}
