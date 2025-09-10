@@ -4,7 +4,7 @@ import NavBar from './components/NavBar';
 import HeroCard from './components/cards/HeroCard';
 import Loader from './components/Loader';
 import ProjectCard from './components/cards/ProjectCard';
-import EducationCard from './components/cards/educationCard';
+import EducationCard from './components/cards/EducationCard';
 
 function App() {
 
