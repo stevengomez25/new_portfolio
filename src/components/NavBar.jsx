@@ -5,7 +5,7 @@ export default function NavBar (){
                 <a className="text-xs md:text-lg sm:text-lg hover:scale-105 bg-white border-black w-1/4 border-1 flex justify-center" href="#about_me">About me</a>
                 <a className="text-xs md:text-lg sm:text-lg hover:scale-105 bg-white border-black w-1/4 border-1 flex justify-center" href="#projects">Projects</a>
                 <a className="text-xs md:text-lg sm:text-lg hover:scale-105 bg-white border-black w-1/4 border-1 flex justify-center" href="#education">Education</a>
-                <a className="text-xs md:text-lg sm:text-lg hover:scale-105 bg-white border-black w-1/4 border-1 flex justify-center" href="/">Experience</a>
+                <a className="text-xs md:text-lg sm:text-lg hover:scale-105 bg-white border-black w-1/4 border-1 flex justify-center" href="#experience">Experience</a>
             </div>
         </div>
     )
