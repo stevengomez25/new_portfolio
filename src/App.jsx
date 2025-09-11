@@ -5,7 +5,7 @@ import HeroCard from './components/cards/HeroCard';
 import Loader from './components/Loader';
 import ProjectCard from './components/cards/ProjectCard';
 import EducationCard from './components/cards/EducationCard';
-import ExperienceCard from './components/cards/experienceCard';
+import ExperienceCard from './components/cards/ExperienceCard';
 
 function App() {
 
