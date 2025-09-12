@@ -23,7 +23,7 @@ const EducationCard = () => {
                 </div><div className="h-2/3 w-9/10 bg-sky-900 shadow-2xl shadow-white text-white hover:scale-105 hover:text-shadow-lg/30 flex flex-col items-start justify-center border-2 border-black rounded-md">
                     <h4 className="px-3 text-xs md:text-sm">Youtube resources</h4>
                     <h2 className="px-3 text-sm md:text-base">SoyDalto/Fazt/MiduDev</h2>
-                    <p className="px-3 text-base md:text-4xl">Arquitectura de software, bases de datos SQL/noSQL, dirección de proyectos, planificación, desarrollo y ejecución</p>
+                    <p className="px-3 text-base md:text-4xl">Arquitectura de software - SQL/noSQL - dirección de proyectos - planificación, desarrollo y ejecución</p>
                     <p className="px-3 text-sm md:text-base">2021 - ongoing</p>
                 </div>
             </div>
