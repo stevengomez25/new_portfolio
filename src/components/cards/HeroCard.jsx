@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import imagen from '../images/heropic.png';
+import imagen from '../images/heropic.jpg';
 import js from '../icons/js.png';
 import next from '../icons/next.png';
 import node from '../icons/node.png';
