@@ -5,7 +5,6 @@ import HeroCard from './components/cards/HeroCard';
 import Loader from './components/Loader';
 import ProjectCard from './components/cards/ProjectCard';
 import EducationCard from './components/cards/EducationCard';
-import ExperienceCard from './components/cards/ExperienceCard';
 
 function App() {
 
@@ -17,9 +16,8 @@ function App() {
       <HeroCard/>
       <ProjectCard/>
       <EducationCard/>
-      <ExperienceCard/>
       <div className='text-white text-center text-xs sm:text-lg fixed bottom-0'>
-        © Developed by StevenGDeveloper 2025. All rights reserved.
+        © Designed and developed by StevenGDeveloper 2025. All rights reserved.
       </div>
     </div>
   )
