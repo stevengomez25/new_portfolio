@@ -23,8 +23,8 @@ import gmail from '../icons/gmail.png';
 const HeroCard = () => {
     return (
         <div id="about_me" className="h-dvh justify-end md:justify-normal w-dvw flex grow items-center md:p-3 flex-col-reverse md:flex-col text-white">
-            <div className="flex flex-col justify-center md:h-full items-center md:p-3 md:flex-row">
-                <div className="pl-1 w-full h-full md:w-2/3 flex flex-col justify-center">
+            <div className="flex flex-col justify-evenly h-full items-center md:p-3 md:flex-row">
+                <div className="pl-1 w-full md:h-full md:w-2/3 flex flex-col justify-center">
                     <h1 className="text-3xl lg:text-6xl md:p-2">Steven Gomez</h1>
                     <h2 className="text-2xl lg:text-4xl md:p-2">The best <i><b><u>Professional</u></b></i> you can get!</h2>
                     <p className="text-xs lg:p-2 md:text-2xl">I'm a passionate and results-driven developer from Colombia, blending creativity with code to build web applications that are clean, functional, and user-focused. By day, I work as a BTS Support and Customer Care Specialist, where I solve technical problems and support clients with precision and empathy. By night (and any spare moment), I dive deep into full stack development.</p>
