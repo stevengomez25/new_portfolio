@@ -27,7 +27,9 @@ const HeroCard = () => {
                 <div className="pl-1 w-full md:h-full md:w-2/3 flex flex-col justify-center">
                     <h1 className="text-3xl lg:text-6xl md:p-2">Steven Gomez</h1>
                     <h2 className="text-2xl lg:text-4xl md:p-2">The best <i><b><u>Professional</u></b></i> you can get!</h2>
-                    <p className="text-xs lg:p-2 md:text-2xl">I'm a passionate and results-driven developer from Colombia, blending creativity with code to build web applications that are clean, functional, and user-focused. By day, I work as a BTS Support and Customer Care Specialist, where I solve technical problems and support clients with precision and empathy. By night (and any spare moment), I dive deep into full stack development.</p>
+                    <p className="text-xs lg:p-2 md:text-2xl">Hello! I’m Steven Gómez, a developer passionate about building modern and scalable applications.<br/>
+
+                        I have worked on full-stack projects using the MERN stack (MongoDB, Express, React, and Node.js), as well as frontend projects with Vite + TailwindCSS to create fast and responsive interfaces.</p>
                     <h3 className="text-s md:text-3xl md:p-2">Contact me!</h3>
                     <div className="flex pl-2">
                         <a className='flex w-15 h-10 pr-3 ' target="blank" href="https://github.com/stevengomez25">
@@ -47,7 +49,7 @@ const HeroCard = () => {
                     <h1 className="text-xs md:text-2xl md:pl-2"><i>-Anton Ego</i></h1>
                 </div>
                 <div className="w-1/2 md:w-1/3 overflow-hidden shadow-2xl  animate-atommorph">
-                    <img src={imagen} alt="heropic" className="w-full h-full  object-cover"/>
+                    <img src={imagen} alt="heropic" className="w-full h-full  object-cover" />
                 </div>
             </div>
             <div className="mt-2 md:mt-0 bg-gradient-to-r from-transparent via-gray-400 to-transparent rounded-full w-full md:h-20 overflow-hidden flex items-center">
